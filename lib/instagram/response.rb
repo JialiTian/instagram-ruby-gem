@@ -9,8 +9,8 @@ module Instagram
             instance_variable_set("@#{k}", v) if v
           end
         end
-        @ratelimit = ::Hashie::Mash.new(ratelimit_hash)
       end
+      data['ratelimit'] = ::Hashie::Mash.new(ratelimit_hash)
       data
     end
 
